@@ -15,7 +15,9 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t udagram-feed-api .
+  - docker build -t udagram-feed-api --build-arg AWS_REGION=${AWS_REGION} 
+    --build-arg AWS_PROFILE=${AWS_PROFILE}
+    --build-arg AWS_BUCKET=${AWS_BUCKET} .
   - docker tag udagram-feed-api unnismi/udagram-feed-api:latest
 
 after_success:

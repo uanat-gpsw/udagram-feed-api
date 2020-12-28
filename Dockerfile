@@ -10,10 +10,11 @@ COPY package*.json ./
 
 # Install dependencies
 RUN npm install
+RUN npm install typescript -g
 
 # Copy app source
 COPY . .
-
+RUN tsc
 # Bind the port that the image will run on
 EXPOSE 8080
 
