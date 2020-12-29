@@ -16,6 +16,13 @@ spec:
     spec:
       containers:
       - name: udagram-feed-api
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m"
         image: unnismi/udagram-feed-api
         ports:
         - containerPort: 8080
