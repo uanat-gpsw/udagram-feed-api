@@ -1,0 +1,79 @@
+Name:              kubernetes
+Namespace:         default
+Labels:            component=apiserver
+                   provider=kubernetes
+Annotations:       <none>
+Selector:          <none>
+Type:              ClusterIP
+IP Families:       <none>
+IP:                10.100.0.1
+IPs:               <none>
+Port:              https  443/TCP
+TargetPort:        443/TCP
+Endpoints:         172.31.23.77:443,172.31.7.115:443
+Session Affinity:  None
+Events:            <none>
+
+
+Name:              udagram-feed-api-svc
+Namespace:         default
+Labels:            app=udagram-feed-api
+Annotations:       <none>
+Selector:          app=udagram-feed-api
+Type:              ClusterIP
+IP Families:       <none>
+IP:                10.100.157.89
+IPs:               <none>
+Port:              <unset>  8080/TCP
+TargetPort:        8080/TCP
+Endpoints:         172.31.8.49:8080
+Session Affinity:  None
+Events:            <none>
+
+
+Name:              udagram-frontend-svc
+Namespace:         default
+Labels:            app=udagram-frontend
+Annotations:       <none>
+Selector:          app=udagram-frontend
+Type:              ClusterIP
+IP Families:       <none>
+IP:                10.100.239.250
+IPs:               <none>
+Port:              <unset>  8100/TCP
+TargetPort:        8080/TCP
+Endpoints:         172.31.19.15:8080
+Session Affinity:  None
+Events:            <none>
+
+
+Name:              udagram-reverseproxy-svc
+Namespace:         default
+Labels:            app=udagram-reverseproxy
+Annotations:       <none>
+Selector:          app=udagram-reverseproxy
+Type:              ClusterIP
+IP Families:       <none>
+IP:                10.100.67.148
+IPs:               <none>
+Port:              <unset>  8080/TCP
+TargetPort:        8080/TCP
+Endpoints:         172.31.0.33:8080
+Session Affinity:  None
+Events:            <none>
+
+
+Name:              udagram-user-api-svc
+Namespace:         default
+Labels:            app=udagram-user-api
+Annotations:       <none>
+Selector:          app=udagram-user-api
+Type:              ClusterIP
+IP Families:       <none>
+IP:                10.100.75.216
+IPs:               <none>
+Port:              <unset>  8080/TCP
+TargetPort:        8080/TCP
+Endpoints:         172.31.19.148:8080
+Session Affinity:  None
+Events:            <none>
